@@ -1,0 +1,80 @@
+
+#hamburger {
+    display: block;
+}
+
+#hamburger {
+    height: var(--menu-height);
+}
+
+nav {
+    height: auto;
+}
+
+#hamburger img {
+    height: 100%;
+    width: auto;
+}
+
+
+ul.meniu {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+nav {
+    background-color: var(--menu-bg-color);
+}
+
+
+nav > ul {
+    transition: all 2s ease-out;
+}
+
+#ch-menu:checked + ul.meniu {
+    display: block;
+    z-index: 2;
+    position: relative;
+}
+
+#ch-menu:checked + ul.meniu > li > div, #ch-menu:checked + ul.meniu > li > a{
+    z-index: 2;
+    position: relative;
+}
+
+#ch-menu {
+    display: none;
+}
+
+nav ul, nav li {
+    list-style-type: none;
+    text-decoration: none;
+    width: 100%;
+    background-color: var(--menu-bg-color);
+}
+
+.text-acasa {
+    display: none;
+}
+
+
+#ch-menu:checked+ul.meniu>li ul>*{
+    position:relative;
+    z-index:200;
+}
+
+nav ul.meniu > li:hover > ul{
+    
+    z-index:200;
+    animation:none;
+}
+
+nav ul.meniu > li {
+    position: relative;
+    width: 100%;
+}
+
+nav > ul.meniu > li > ul {
+    width: 100%;
+}

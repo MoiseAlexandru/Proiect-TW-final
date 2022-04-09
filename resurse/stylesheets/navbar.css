@@ -1,0 +1,77 @@
+
+/* nav */
+nav {
+    height: var(--menu-height);
+    width: 100%;
+    top: 0;
+    padding: 0;
+    background-color: var(--menu-bg-color);
+    z-index: 10;
+    position: sticky;
+    position: -webkit-sticky;
+}
+
+nav ul, nav li {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+
+/* submeniu */
+nav ul.meniu ul {
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+nav > ul.meniu > li > ul {
+    width: 100%;
+}
+
+nav ul.meniu li {
+    list-style-type: none;
+    text-align: center;
+    background: var(--menu-bg-color);
+    cursor: pointer;
+}
+
+nav ul.meniu li a, nav ul.meniu li div {
+    text-decoration: none;
+    font-family: 'AdigianaToybox';
+    font-size: 1.25em;
+    color: black;
+    display: block;
+    height: var(--menu-height);
+    line-height: var(--menu-height);
+}
+
+ul.meniu a:hover, ul.meniu div:hover {
+    color: var(--menu-hover-color);
+}
+
+/* deschidere submeniu */
+nav ul.meniu > li:hover > ul {
+    display: block;
+    animation-name: deschidere_submeniu;
+    animation-iteration-count: 1;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    transform-origin: 50% 0;
+}
+
+/* animatie deschidere submeniu */
+@keyframes deschidere_submeniu {
+    0% {
+        opacity: 0;
+        transform: scale(0, 0);
+    }
+    50% {
+        transform: scale(0.5, 0.5);
+    }
+    100% {
+        opacity: 1;
+        transform:scale(1,1);
+    }
+}

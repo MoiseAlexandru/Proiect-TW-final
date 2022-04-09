@@ -1,0 +1,51 @@
+:root {
+    --main-bg-color: #FDF6FF;
+    --menu-bg-color: #38AFFF;
+    --menu-hover-color: #C05CC6;
+    --sageata-bg-color: #E8D7F1;
+    --sageata-color: #A167A5;
+    --iframe-link-bg: #D3BCCC;
+    --iframe-link-col: #A167A5;
+    --iframe-link-hover-col: white;
+    --iframe-link-hover-bg: #4A306D;
+    --margin-main: 40px;
+    --padding-intern: 5px;
+}
+
+:root {
+    --max-limit-small: 549px;
+    --min-limit-medium: 550px;
+    --max-limit-medium: 999px;
+    --min-limit-big: 1000px;
+}
+
+:root {
+    --menu-height: 3rem;
+}
+
+@media only screen and (max-width: 549px)
+{
+    body {
+        font-size: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 999px)
+{
+    body {
+        font-size: 12px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (min-width: 1000px)
+{
+    body {
+        font-size: 14px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}

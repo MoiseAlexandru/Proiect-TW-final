@@ -1,0 +1,68 @@
+
+
+/* linkurile din meniu */
+
+nav ul.meniu > li {
+    float: left;
+    position: relative;
+    width: 17%;
+    min-width: 110px;
+}
+
+nav ul.meniu > li.link-right {
+    float: right;
+}
+
+
+ul.meniu a, ul.meniu div {
+    transition: 400ms linear;
+}
+
+/* deschidere submeniu */
+
+
+
+#hamburger {
+    display: none;
+    height: var(--menu-height);
+}
+
+#ch-menu {
+    display: none;
+}
+
+#hamburger img {
+    height: 100%;
+    width: auto;
+}
+
+@keyframes deschidere_submeniu {
+    0% {
+        opacity: 0;
+        transform: scale(0, 0);
+    }
+    50% {
+        transform: scale(0.5, 0.5);
+    }
+    100% {
+        opacity: 1;
+        
+        transform:scale(1,1);
+    }
+}
+
+
+
+p.text-acasa {
+    width: 70%;
+    margin-left: 15%;
+    display: inline;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.7s linear, opacity 0.7s linear;
+}
+
+div.optiune-acasa:hover > p.text-acasa{
+    visibility: visible;
+    opacity: 1;
+}

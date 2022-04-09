@@ -1,0 +1,113 @@
+body {
+    padding: 0;
+    border: 0;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    margin: 0;
+    margin-top: 30px;
+    margin-bottom: 0 !important;
+    padding: 0;
+}
+
+main {
+    background-color: var(--main-bg-color);
+    margin: 0;
+    padding: 0;
+}
+
+
+.imagine-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    aspect-ratio: 7/1;
+}
+
+
+
+section {
+    border: 1px solid palevioletred;
+    padding: 10px;
+}
+
+#container {
+    display: grid;
+}
+
+@media only screen and (max-width: 549px) {
+    #container {
+        grid-template-areas:
+                            "prezentare"
+                            "calendar"
+                            "promotii"
+                            "continut"
+                            "tabel-idk"
+                            "date-server-site"
+                            "utilizatori-online"
+                            "date-utilizatori-statistici";
+    }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 999px) {
+    #container {
+        grid-template-areas:
+                            "prezentare prezentare"
+                            "calendar promotii"
+                            "continut continut"
+                            "tabel-idk tabel-idk"
+                            "date-server-site date-server-site"
+                            "utilizatori-online date-utilizatori-statistici";
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    #container {
+        grid-template-areas: 
+                        "prezentare prezentare prezentare"
+                        "calendar tabel-idk promotii"
+                        "continut continut continut"
+                        "date-server-site utilizatori-online date-utilizatori-statistici";
+    }
+}
+
+#tabel-idk { 
+    grid-area: tabel-idk;
+}
+
+#prezentare {
+    grid-area: prezentare;
+}
+
+#calendar {
+    grid-area: calendar;
+}
+
+#promotii {
+    grid-area: promotii;
+}
+
+#continut {
+    grid-area: continut;
+    height: 1000px;
+}
+
+
+#date-server-site {
+    grid-area: date-server-site;
+}
+
+
+#utilizatori-online {
+    grid-area: utilizatori-online;
+}
+
+#date-utilizatori-statistici {
+    grid-area: date-utilizatori-statistici;
+}
