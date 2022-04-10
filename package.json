@@ -1,0 +1,27 @@
+{
+  "name": "tw-varianta-finala",
+  "version": "1.0.0",
+  "description": "site-jucarii",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MoiseAlexandru/Proiect-TW-final.git"
+  },
+  "keywords": [
+    "jucarii",
+    "jocuri",
+    "copii"
+  ],
+  "author": "Moise Alexandru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MoiseAlexandru/Proiect-TW-final/issues"
+  },
+  "homepage": "https://github.com/MoiseAlexandru/Proiect-TW-final#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

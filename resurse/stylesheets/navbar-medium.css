@@ -1,4 +1,4 @@
-@media (min-width: var(--min-limit-medium)) and (max-width: var(--max-limit-medium)) {
+@media only screen and (min-width: 550px) and (max-width: 999px) {
     p.text-acasa {
         display: none;
     }
