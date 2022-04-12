@@ -2,25 +2,17 @@ const express = require("express");
 
 app = express(); /// server numit app
 
+app.set("view engine", "ejs");
 app.use("/resurse", express.static(__dirname + "/resurse"));
 
-app.get("/", (req, res) => {
+app.get(["/", "/index", "/home"], (req, res) => {
     console.log(__dirname);
-    res.sendFile(__dirname + "/index.html");
-})
-
-app.get("/ceva", (req, res, next) => {
-    res.write("salut1");
-    next();
-    //res.end();
-})
-app.get("/ceva", (req, res, next) => {
-    res.write("salut2");
-    next();
+    res.render("pagini/index");
 })
 
 app.get("/*", (req, res) => {
-    res.write("cerere generala");
+    console.log("pagini" + req.url);
+    res.render("pagini" + req.url);
     res.end();
 })
 
