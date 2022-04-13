@@ -20,7 +20,7 @@ main {
     background-color: var(--main-bg-color);
     margin: 0;
     padding: 0;
-    min-height: 1000px;
+    min-height: 800px;
 }
 
 

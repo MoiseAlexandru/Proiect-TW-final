@@ -62,7 +62,7 @@ p.text-acasa {
     transition: visibility 0.7s linear, opacity 0.7s linear;
 }
 
-div.optiune-acasa:hover > p.text-acasa{
+a.optiune-acasa:hover > p.text-acasa{
     visibility: visible;
     opacity: 1;
 }

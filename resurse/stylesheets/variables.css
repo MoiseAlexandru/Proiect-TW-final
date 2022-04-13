@@ -26,7 +26,7 @@
 @media only screen and (max-width: 549px)
 {
     body {
-        font-size: 10px;
+        font-size: 14px;
         margin-left: 0;
         margin-right: 0;
     }
@@ -35,7 +35,7 @@
 @media only screen and (min-width: 550px) and (max-width: 999px)
 {
     body {
-        font-size: 12px;
+        font-size: 16px;
         margin-left: 5%;
         margin-right: 5%;
     }
@@ -44,7 +44,7 @@
 @media only screen and (min-width: 1000px)
 {
     body {
-        font-size: 14px;
+        font-size: 20px;
         margin-left: 10%;
         margin-right: 10%;
     }
