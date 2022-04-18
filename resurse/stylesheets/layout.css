@@ -36,10 +36,12 @@ main {
 
 section {
     border: 1px solid palevioletred;
-    padding: 10px;
+    padding: 0;
+    max-width: 100%;
 }
 
 #container {
+    max-width: 100%;
     display: grid;
 }
 
@@ -53,7 +55,10 @@ section {
                             "tabel-idk"
                             "date-server-site"
                             "utilizatori-online"
-                            "date-utilizatori-statistici";
+                            "date-utilizator-statistici";
+    }
+    #tabel-idk {
+        max-width: 100%;
     }
 }
 
@@ -65,7 +70,7 @@ section {
                             "continut continut"
                             "tabel-idk tabel-idk"
                             "date-server-site date-server-site"
-                            "utilizatori-online date-utilizatori-statistici";
+                            "utilizatori-online date-utilizator-statistici";
     }
 }
 
@@ -75,12 +80,13 @@ section {
                         "prezentare prezentare prezentare"
                         "calendar tabel-idk promotii"
                         "continut continut continut"
-                        "date-server-site utilizatori-online date-utilizatori-statistici";
+                        "date-server-site utilizatori-online date-utilizator-statistici";
     }
 }
 
 #tabel-idk { 
     grid-area: tabel-idk;
+    min-height: 500px;
 }
 
 #prezentare {
@@ -111,5 +117,5 @@ section {
 }
 
 #date-utilizatori-statistici {
-    grid-area: date-utilizatori-statistici;
+    grid-area: date-utilizator-statistici;
 }

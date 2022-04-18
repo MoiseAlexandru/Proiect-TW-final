@@ -1,0 +1,82 @@
+.clasa-tabel {
+    max-width: 90%;
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    position: absolute;
+    height: auto;
+    left: 5%;
+    right: 5%;
+}
+
+
+@media only screen and (min-width: 1000px)
+{
+    .clasa-tabel {
+        position: static !important;
+        overflow: hidden !important;
+    }
+}
+
+.tabel {
+    width: 100%;
+    min-width: 600px;
+    position: relative;
+}
+
+table, td {
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+thead, tbody {
+    border: 4px solid var(--table-margin-col);
+}
+
+th {
+    border: 1px solid var(--table-margin-col);
+}
+
+.clasa-tabel caption {
+    font-size: 35px;
+    text-align: center;
+    caption-side: bottom;
+}
+
+.clasa-tabel p {
+    text-align: center;
+}
+
+.rand-zile, rand-luna {
+    font-weight: bold;
+}
+
+.rand-zile th:nth-child(odd), .rand-1 td:nth-child(odd), .rand-2 td:nth-child(odd), .rand-3 td:nth-child(odd), .rand-4 td:nth-child(odd) {
+    border-left: 4px solid var(--cell-odd);
+}
+
+.rand-zile th:nth-child(even), .rand-1 td:nth-child(even), .rand-2 td:nth-child(even), .rand-3 td:nth-child(even), .rand-4 td:nth-child(even) {
+    border-left: 4px solid var(--cell-even);
+}
+
+.rand-1 td:last-child {
+    background-color: inherit;
+}
+
+.rand-4 {
+    border-bottom: 5px solid var(--table-margin-col);
+}
+
+tr:hover td, tr:hover th{
+    transition: 0.5s;
+    box-shadow: 0px 0px 10px black;
+}
+
+@media only screen and (max-width: 2000px)
+{
+    .clasa-tabel {
+        overflow: scroll;
+        height: auto;
+    }
+}

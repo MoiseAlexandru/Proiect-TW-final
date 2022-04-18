@@ -10,6 +10,10 @@ app.get(["/", "/index", "/home"], (req, res) => {
     res.render("pagini/index", {ip: req.ip});
 })
 
+app.get("/about", (req, res) => {
+    console.log("pagini" + "/about");
+    res.render("pagini/about");
+})
 
 app.get("/*.ejs", (req, res) => {
     res.status(403).render("pagini/403.ejs");

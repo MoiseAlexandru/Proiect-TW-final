@@ -8,6 +8,9 @@
     --iframe-link-col: #A167A5;
     --iframe-link-hover-col: white;
     --iframe-link-hover-bg: #4A306D;
+    --table-margin-col: #4A306D;
+    --cell-odd: #A167A5;
+    --cell-even: #C05CC6;
     --margin-main: 40px;
     --padding-intern: 5px;
 }
@@ -26,7 +29,7 @@
 @media only screen and (max-width: 549px)
 {
     body {
-        font-size: 14px;
+        font-size: 12px;
         margin-left: 0;
         margin-right: 0;
     }
@@ -35,17 +38,17 @@
 @media only screen and (min-width: 550px) and (max-width: 999px)
 {
     body {
-        font-size: 16px;
-        margin-left: 5%;
-        margin-right: 5%;
+        font-size: 13px;
+        margin-left: 2.5%;
+        margin-right: 2.5%;
     }
 }
 
 @media only screen and (min-width: 1000px)
 {
     body {
-        font-size: 20px;
-        margin-left: 10%;
-        margin-right: 10%;
+        font-size: 14px;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 }
