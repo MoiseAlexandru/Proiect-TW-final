@@ -11,3 +11,11 @@
     color: var(--menu-hover-color);
     text-decoration: none;
 }
+
+.specialhr {
+    margin-top:20px;
+    height: 20px;
+    width: 100%;
+    background: repeating-linear-gradient(var(--iframe-link-hover-bg), var(--menu-hover-color) 25%);
+    border-radius: 25px;
+}

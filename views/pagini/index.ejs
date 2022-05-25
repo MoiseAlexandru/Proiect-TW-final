@@ -18,6 +18,9 @@
 
         <%- include("../fragmente/header.ejs"); %>
 
+        <h1 class = "yes-print" style = "display: none;"> Five nights at Freddy's shop </h1>
+        <br class = "yes-print" style="display: none">
+
         <main>
             
             <div id = "container">
@@ -26,7 +29,6 @@
                     <img class = "imagine-prezentare" src = "/resurse/layout-images/kids-playing.jpeg" alt = "A picture of kids playing"><img class = "imagine-prezentare" src = "/resurse/layout-images/balls.jpg" alt = "A picture with balls"><img class = "imagine-prezentare" src = "/resurse/layout-images/picture-2-kids.jpg" alt = "A picture of 2 kids playing">
                     <!-- Da, arata urat linia dar daca pun spatii in cod, imaginile apar cu spatiu intre ele in pagina-->
                 </section>
-
 
                 <section id = "tabel-idk">
                     <h2> Aceasta este zona de tabel </h2>
@@ -43,14 +45,23 @@
                 </section>
                 <section id = "continut">
                     <h2> Aceasta este zona de continut </h2>
-                    <div id = "container-iframe">
+                    <div id = "container-iframe" class = "no-print">
                         <div id = "iframe-1-linkuri">
                             <a href = "/resurse/iframe1/joc-vrajitoare.mp4" target = "ifr1"> Si pentru copii </a>
                             <a href = "/resurse/iframe1/joc-adulti.mp4" target = "ifr1"> Si pentru adulti </a>
                             <a href = "/resurse/iframe1/joc-pisica.mp4" target = "ifr1"> Si pentru animale </a>    
                         </div>
                         <!-- !To do: turn off autoplay -->
-                        <iframe id = "iframe-1" name = "ifr1"></iframe>
+                        <iframe id = "iframe-1" name = "ifr1" class = "no-print"></iframe>
+                    </div>
+                    
+                    <div id = "video-vtt" class = "no-print">
+                        <video controls>
+                            <source src = "/resurse/videos/childrenplaying.mp4" type = "video/mp4">
+                            <source src = "/resurse/videos/childrenplaying.webm" type = "video/webm">
+                            <track src = "/resurse/videos/childrenplaying_en.vtt" kind = "subtitles" srclang = "en" label = "English" default>
+                            <track src = "/resurse/videos/childrenplaying_ro.vtt" kind = "subtitles" srclang = "ro" label = "Romanian">
+                        </video>
                     </div>
                 </section>
                 <section id = "date-server-site">
@@ -71,7 +82,9 @@
             </div>
         </main>
         
-        <footer style = "text-align: center">
+        <br class = "yes-print" style="display: none">
+
+        <footer>
             <%- include("../fragmente/footer.ejs") %>
         </footer>
         

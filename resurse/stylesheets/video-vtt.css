@@ -1,0 +1,15 @@
+#video-vtt {
+    width: 50%;
+    height: auto;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#video-vtt video {
+    width: 100%;
+}
+
+#video-vtt video::cue {
+    background-color: white;
+    color: var(--menu-hover-color);
+}
