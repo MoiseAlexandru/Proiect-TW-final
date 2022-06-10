@@ -1,0 +1,53 @@
+{
+	"gallery_path":"resurse/images/gallery",
+	"images": [
+		{
+			"file":"bluetoy.jpg",
+			"description":"a blue toy"
+		},
+		{
+			"file":"Baby-ActionFigure.webp",
+			"description": "Figurina Baby"
+		},
+		{
+			"file":"Ballora-ActionFigure.webp",
+			"description": "Figurina Ballora"
+		},
+		{
+			"file":"Bonnie_Funko_Action_Figure.webp",
+			"description": "Figurina Bonnie Funko"
+		},
+		{
+			"file":"Chica-ActionFigure.webp",
+			"description": "Figurina Chica"
+		},
+		{
+			"file":"ElChip-ActionFigure.webp",
+			"description": "Figurina ElChip"
+		},
+		{
+			"file":"Foxy-ActionFigure.webp",
+			"description": "Figurina Foxy"
+		},
+		{
+			"file":"FreddyFazbear-ActionFigure.webp",
+			"description": "Figurina Freddy Fazbear"
+		},
+		{
+			"file":"FuntimeFoxy-ActionFigure.webp",
+			"description": "Figurina Funtime Foxy"
+		},
+		{
+			"file":"FuntimeFreddy-ActionFigure.webp",
+			"description": "Figurina Funtime Freddy"
+		},
+		{
+			"file":"GoldenFreddy-ActionFigure.webp",
+			"description": "Figurina Golden Freddy"
+		},
+		{
+			"file":"Pigpatch-ActionFigure.webp",
+			"description": "Figurina Pigpatch"
+		}
+	]
+}

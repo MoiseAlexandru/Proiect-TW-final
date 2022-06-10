@@ -1,0 +1,16 @@
+
+#galerie-statica {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* echivalent la 1fr 1fr 1fr */
+    gap: 10px;
+}
+
+#galerie-statica img {
+    width: 100%;
+}
+
+#galerie-statica figure {
+    border: 2px solid red;
+    margin: 0;
+    height: fit-content;
+}

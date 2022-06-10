@@ -12,6 +12,20 @@
         <main>
             <br>
             <p> Asta e pagina de produse bois </p>
+            <div id = "galerie-statica">
+                <%
+                    for(let imag of locals.images.images) { %>
+                        <figure>
+                            <picture>
+                                <source srcset = "<%- imag.small %>" media = "(max-width: 549px)" />
+                                <source srcset = "<%- imag.medium %>" media = "(max-width: 999px)" />
+                                <img src = "<%- imag.big %>" alt = "aici ar trebui sa fie o imagine" />
+                            </picture>
+                            <figcaption> Descriere </figcaption>
+                        </figure>
+                <%  }
+                %>
+            </div>
         </main>
     
         <footer>
