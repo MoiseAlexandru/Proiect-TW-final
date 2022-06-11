@@ -11,17 +11,28 @@
     
         <main>
             <br>
-            <p> Asta e pagina de produse bois </p>
+            <h1> Aceasta este pagina de produse </h1>
             <div id = "galerie-statica">
                 <%
-                    for(let imag of locals.images.images) { %>
-                        <figure>
+                    for(let imag of locals.images) { %>
+                        <figure class="sketchy">
                             <picture>
                                 <source srcset = "<%- imag.small %>" media = "(max-width: 549px)" />
                                 <source srcset = "<%- imag.medium %>" media = "(max-width: 999px)" />
-                                <img src = "<%- imag.big %>" alt = "aici ar trebui sa fie o imagine" />
+                                <img src = "<%- imag.big %>" alt = "<%- imag.alt %>" />
                             </picture>
-                            <figcaption> Descriere </figcaption>
+                            <figcaption>
+                                <%- imag.description %>
+                                <% if(imag.license[0] != "public") { %>
+                                    <p class = "licenta">
+                                        <a href = "<%- imag.license[1] %>"> "<%- imag.license[0] %>" </a>
+                                        by
+                                        <a href = "<%- imag.license[3] %>"> <%- imag.license[2] %> </a>
+                                        is licensed under 
+                                        <a href = "<%- imag.license[5] %>"> <%- imag.license[4]%> </a>
+                                    </p> 
+                                <% } %>
+                            </figcaption>
                         </figure>
                 <%  }
                 %>

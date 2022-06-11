@@ -22,6 +22,39 @@ app.get("/*.ejs", (req, res) => {
     res.status(403).render("pagini/403");
 })
 
+
+// pe pagina de produse vreau sa afisez doar imaginile care au tagul "figurine-sale" (voi lua doar primele 12 rezultate)
+app.get("/produse", (req, res) => {
+    console.log("pagini" + "/produse");
+    let products = [];
+    for(let image of obImages.images) {
+        if(products.length == 12)
+            break;
+        let keep = false;
+        for(let property of image.properties)
+            if(property == "figurine-sale")
+                keep = true;
+        if(keep == true)
+            products.push(image);
+    }
+    res.render("pagini/produse", {images: products}, (err, rezRender) => {
+        if(err) {
+            if(err.message.includes("Failed to lookup view")) {
+                console.log(err);
+                res.status(404).render("pagini/404");
+            }
+            else {
+                res.render("pagini/eroare_generala");
+            }
+        }
+        else {
+            console.log("Pagina se incarca");
+            res.send(rezRender);
+        }
+    });
+    res.end();
+})
+
 app.get("/*", (req, res) => {
     console.log("pagini" + req.url);
     res.render("pagini" + req.url, {images: obImages}, (err, rezRender) => {
@@ -55,12 +88,12 @@ function createImages() {
         
         image.og = `${obImages.gallery_path}/${image.file}`;
 
-        let dim_small = 150;
+        let dim_small = 350;
         image.small = `${obImages.gallery_path}/small/${imageName}-${dim_small}.webp`;
         if(!fs.existsSync(image.small))
             sharp(__dirname + "/" + image.og).resize(dim_small, dim_small, {fit: 'contain', background: { r: 255, g: 255, b: 255, alpha: 0.5}}).toFile(__dirname + "/" + image.small);
         
-        let dim_medium = 350;
+        let dim_medium = 450;
         image.medium = `${obImages.gallery_path}/medium/${imageName}-${dim_medium}.png`;
         if(!fs.existsSync(image.medium))
             sharp(__dirname + "/" + image.og).resize(dim_medium, dim_medium, {fit: 'contain', background: { r: 255, g: 255, b: 255, alpha: 0.5}}).toFile(__dirname + "/" + image.medium);

@@ -3,51 +3,101 @@
 	"images": [
 		{
 			"file":"bluetoy.jpg",
-			"description":"a blue toy"
+			"description":"Figurina ursulet",
+			"alt":"O figurina cu un ursulet albastru",
+			"properties":["figurine-sale", "common"],
+			"license": ["public"]
 		},
 		{
 			"file":"Baby-ActionFigure.webp",
-			"description": "Figurina Baby"
+			"description": "Figurina Baby",
+			"alt":"O figurina Baby",
+			"properties":["figurine-sale", "common"],
+			"license": ["public"]
+		},
+		{
+			"file":"Bear-ActionFigure.jpg",
+			"description": "Figurina Freddy Fazbear",
+			"alt": "O figurina Freddy Fazbear",
+			"properties": ["figurine-sale", "common"],
+			"license": [
+				"LEGO Freddy Fazbear (Five Nights at Freddy's)",
+				"https://www.flickr.com/photos/27917559@N05/15676341324",
+				"BRICK 101",
+				"https://www.flickr.com/photos/27917559@N05",
+				"CC BY-NC 2.0",
+				"https://creativecommons.org/licenses/by-nc/2.0/?ref=openverse"
+			]
 		},
 		{
 			"file":"Ballora-ActionFigure.webp",
-			"description": "Figurina Ballora"
+			"description": "Figurina Ballora",
+			"alt": "O figurina Ballora",
+			"properties":["figurine-sale", "common"],
+			"license": ["public"]
 		},
 		{
 			"file":"Bonnie_Funko_Action_Figure.webp",
-			"description": "Figurina Bonnie Funko"
+			"description": "Figurina Bonnie Funko",
+			"alt": "O figurina Bonnie Funko",
+			"properties":["figurine-sale", "common"],
+			"license": ["public"]
 		},
 		{
 			"file":"Chica-ActionFigure.webp",
-			"description": "Figurina Chica"
+			"description": "Figurina Chica",
+			"alt": "O figurina Chica",
+			"properties":["figurine-sale", "common"],
+			"license": ["public"]
 		},
 		{
 			"file":"ElChip-ActionFigure.webp",
-			"description": "Figurina ElChip"
+			"description": "Figurina ElChip",
+			"alt": "O figurina ElChip",
+			"properties":["figurine-sale", "common"],
+			"license": ["public"]
 		},
 		{
 			"file":"Foxy-ActionFigure.webp",
-			"description": "Figurina Foxy"
+			"description": "Figurina Foxy",
+			"alt": "O figurina Foxy",
+			"properties":["figurine-sale", "common"],
+			"license": ["public"]
 		},
 		{
 			"file":"FreddyFazbear-ActionFigure.webp",
-			"description": "Figurina Freddy Fazbear"
+			"description": "Figurina Freddy Fazbear",
+			"alt": "O figurina Freddy Fazbear",
+			"properties":["figurine-sale", "common"],
+			"license": ["public"]
 		},
 		{
 			"file":"FuntimeFoxy-ActionFigure.webp",
-			"description": "Figurina Funtime Foxy"
+			"description": "Figurina Funtime Foxy",
+			"alt": "O figurina Funtime Foxy",
+			"properties":["figurine-sale", "common"],
+			"license": ["public"]
 		},
 		{
 			"file":"FuntimeFreddy-ActionFigure.webp",
-			"description": "Figurina Funtime Freddy"
+			"description": "Figurina Funtime Freddy",
+			"alt": "O figurina Funtime Freddy",
+			"properties":["figurine-sale", "common"],
+			"license": ["public"]
 		},
 		{
 			"file":"GoldenFreddy-ActionFigure.webp",
-			"description": "Figurina Golden Freddy"
+			"description": "Figurina Golden Freddy",
+			"alt": "O figurina Golden Freddy",
+			"properties":["figurine-sale", "common"],
+			"license": ["public"]
 		},
 		{
 			"file":"Pigpatch-ActionFigure.webp",
-			"description": "Figurina Pigpatch"
+			"description": "Figurina Pigpatch",
+			"alt": "O figurina Pigpatch",
+			"properties":["figurine-sale", "common"],
+			"license": ["public"]
 		}
 	]
 }
