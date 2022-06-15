@@ -1,0 +1,17 @@
+
+<div id = "galerie-animata">
+    <% for(let image of locals.imagesSlideshow) { %>
+        <figure>
+            <picture> 
+                <source srcset = "<%- image.small %>">
+                <img src = "<%- image.small %>" alt = "aici ar trebui sa fie o imagine din galeria animata">
+            </picture>
+            <!--
+            <figcaption>
+                <%- image.description %>
+            </figcaption>
+            -->
+        </figure>
+        
+    <% } %>
+</div>

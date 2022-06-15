@@ -1,6 +1,6 @@
 
 
-figcaption {
+#galerie-statica figcaption {
   position: relative;
 }
 
@@ -24,16 +24,16 @@ body {
     counter-reset: nrimagine 0;
 }
 
-figure {
+#galerie-statica figure {
     counter-increment: nrimagine;
 }
 
-figure {
+#galerie-statica figure {
   margin-left: 7px !important;
   margin-right: 7px !important;
 }
 
-figure:hover picture {
+#galerie-statica figure:hover picture {
   filter: contrast(200%);
   transition: 1.1s linear;
 }
@@ -59,12 +59,12 @@ figure:hover picture {
       column-gap: 10%;
       row-gap: 20px;
   }
-  figcaption {
+  #galerie-statica figcaption {
     text-align: center;
     font-size: 1.25rem;
     height: 100px;
   }
-  figure:hover figcaption {
+  #galerie-statica figure:hover figcaption {
     font-size: 1.65rem;
     transition: 1.1s linear;
   }
@@ -76,12 +76,12 @@ figure:hover picture {
       grid-template-columns: 1fr;
       row-gap: 10px;
   }
-  figcaption {
+  #galerie-statica figcaption {
     text-align: center;
     font-size: 1.10rem;
     height: 70px;
   }
-  figure:hover figcaption {
+  #galerie-statica figure:hover figcaption {
     font-size: 1.35rem;
     transition: 1.1s linear;
   }
@@ -95,13 +95,13 @@ figure:hover picture {
         column-gap: 5%;
         row-gap: 30px;
     }
-    figcaption {
+    #galerie-statica figcaption {
       text-align: center;
       font-size: 1.5rem;
       height: 100px;
     }
     
-    figure:hover figcaption {
+    #galerie-statica figure:hover figcaption {
       font-size: 2rem;
       transition: 1.1s linear;
     }

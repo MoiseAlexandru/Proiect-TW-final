@@ -1,0 +1,97 @@
+
+
+@use 'sass:math';
+
+@media only screen and (max-width: 999px) {
+    #galerie-animata {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    $nrImagini: <%- locals.nrImagini %>;
+
+    $frameTime: math.div(1, $nrImagini) * 100%;
+
+    #galerie-animata {
+        position: relative;
+        width: 355px;
+        height: 355px;
+        border: 2px solid black;
+        overflow: hidden;
+        margin: auto;
+    }
+
+    #galerie-animata figure {
+        margin: 0;
+        position: absolute;
+        left:0;
+        top:0;
+        z-index: 0;
+        animation-name: animatie-galerie;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-duration: $nrImagini * 3s;	
+        transform-origin: 0px center;
+    }
+
+    #galerie-animata:hover figure{
+        animation-play-state: paused;
+    }
+
+    /*
+    #galerie-animata:hover {
+        @for $i from 1 through $nrImagini {
+            #galerie-animata {
+                animation-play-state: paused;
+            }
+        }
+    }
+    */
+
+    @for $i from 0 through $nrImagini - 1 {
+        #galerie-animata figure:nth-of-type(#{$nrImagini - $i}) {
+            animation-delay: 3s * $i;
+        }
+    }
+
+
+    @keyframes animatie-galerie {
+        0% {
+            z-index: 10;
+            opacity: 1;
+        }
+        #{math.div($frameTime, 4)} {
+            transform: translate(0, 0);
+        }
+        #{math.div($frameTime, 4) * 2} {
+            transform: translate(100px, 0px);
+            opacity: 1;
+        }
+        #{math.div($frameTime, 4) * 3} {
+            transform: translate(-100px, 0px);
+        }
+        #{$frameTime} {
+            z-index: 10;
+            transform: translate(300px, 0px);
+            opacity: 0;
+        }
+        #{$frameTime + 0.000001%} {
+            z-index: -10;
+            transform: translate(0px, 0px);
+        }
+        #{100% - $frameTime} {
+            opacity: 0;
+            z-index: -10;
+        }
+        #{100% - $frameTime + 0.000001%} {
+            z-index: 0;
+        }
+        100% {
+            opacity: 1;
+            z-index: 0;
+            transform: translate(0px, 0px);
+        }
+    }
+}
