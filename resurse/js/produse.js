@@ -1,5 +1,12 @@
 
 window.onload = function() {
+
+
+    document.getElementById("inp-an").onchange = function() {
+        document.getElementById("infoRange").innerHTML = " (" + this.value + ")";
+    }
+
+
     document.getElementById("filtrare").onclick = function() {
         var valNume = document.getElementById("inp-nume").value.toLowerCase();
         
@@ -18,6 +25,9 @@ window.onload = function() {
             //console.log("intra", minAn, maxAn);
         }
 
+        var valAn = document.getElementById("inp-an").value;
+
+
         var articole = document.getElementsByClassName("produs");
         //console.log(articole.length);
         for(let art of articole) {
@@ -30,7 +40,11 @@ window.onload = function() {
             let pretArt = parseInt(art.getElementsByClassName("val-pret")[0].innerHTML);
             let cond2 = (minPret <= pretArt && pretArt <= maxPret);
             
-            let conditieFinala = cond1 && cond2;
+            let anArt = parseInt(art.getElementsByClassName("val-an")[0].innerHTML);
+            let cond3 = (anArt <= valAn);
+            console.log("val an: ", valAn, "anArt: ", anArt);
+
+            let conditieFinala = cond1 && cond2 && cond3;
             //console.log("'" + valNume + "' '" + numeArt + "'");
             if(conditieFinala)
                 art.style.display = "block";

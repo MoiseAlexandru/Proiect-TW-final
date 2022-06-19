@@ -10,9 +10,9 @@
 
 @media only screen and (min-width: 1000px) {
 
-@if 8 > 0 {
+@if 0 > 0 {
 
-    $nrImagini: 8;
+    $nrImagini: 0;
 
     $frameTime: math.div(1, $nrImagini) * 100%;
 
