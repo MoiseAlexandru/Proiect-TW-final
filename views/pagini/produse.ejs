@@ -2,6 +2,7 @@
 <html lang = "ro">
     <head>
         <%- include ("../fragmente/head.ejs"); %>
+        <script type = "text/javascript" src = "/resurse/js/produse.js"></script>
     </head>
 
     <body>
@@ -12,31 +13,89 @@
         <main>
             <br>
             <h1> Aceasta este pagina de produse </h1>
-            <div id = "galerie-statica">
-                <%
-                    for(let imag of locals.images) { %>
-                        <figure class="sketchy">
-                            <picture>
-                                <source srcset = "<%- imag.small %>" media = "(max-width: 549px)" />
-                                <source srcset = "<%- imag.medium %>" media = "(max-width: 999px)" />
-                                <img src = "<%- imag.big %>" alt = "<%- imag.alt %>" />
-                            </picture>
-                            <figcaption>
-                                <%- imag.description %>
-                                <% if(imag.license[0] != "public") { %>
-                                    <p class = "licenta">
-                                        <a href = "<%- imag.license[1] %>"> "<%- imag.license[0] %>" </a>
-                                        by
-                                        <a href = "<%- imag.license[3] %>"> <%- imag.license[2] %> </a>
-                                        is licensed under 
-                                        <a href = "<%- imag.license[5] %>"> <%- imag.license[4]%> </a>
-                                    </p> 
-                                <% } %>
-                            </figcaption>
-                        </figure>
-                <%  }
-                %>
+
+            <label> Nume: 
+                <input type = "text" id = "inp-nume">
+            </label>
+            <div> Pret produs:
+                <label> Sub 100 lei
+                    <input id = "i_rad1" name = "gr_rad" value = "0:100" type = "radio">
+                </label>
+                <label> Intre 100 si 200 lei
+                    <input id = "i_rad2" name = "gr_rad" value = "100:200" type = "radio">
+                </label>
+                <label> Mai mult de 200 lei
+                    <input id = "i_rad3" name = "gr_rad" value = "200:3000" type = "radio">
+                </label>
+                <label> Toate
+                    <input id = "i_rad4" name = "gr_rad" value = "tot" type = "radio" checked>
+                </label>
             </div>
+
+            <div style = "border: 1px solid black" id = "divfiltrari">
+                <button id = "filtrare"> Filtreaza </button>
+                <button id = "resetare"> Reseteaza </button>
+                <br>
+                <button id = "sortCrescNume"> Sorteaza crescator dupa nume si pret </button>
+                <button id = "sortDescrescNume"> Sorteaza descrescator dupa nume si pret </button>
+            </div>
+
+            <br>
+            <div class = "grid-produse">
+                <% for(let prod of locals.produse) { %>
+                    <div class = "produs">
+                        <h3 class = "nume-produs"> <a href = "/produs/<%- prod.id %>">  <span class = "val-nume"><%-prod.nume%></span> </a> </h3>
+                        <table>
+                            <tr>
+                                <th> An fabricare </th>
+                                <th> <span class = "val-an"><%-prod.an_fabricare%></span> </th> 
+                            </tr> 
+                            <tr>
+                                <th> Categorie </th>
+                                <th> <span class = "val-categorie"><%-prod.categorie%></span> </th>
+                            </tr>
+                            <tr>
+                                <th> Culori </th>
+                                <th> <span class = "val-culori"><%- prod.culori%></span> </th>
+                            </tr>
+                            <tr>
+                                <th> Data adaugarii </th>
+                                <th>
+                                    <time>
+                                        <%= prod.data_adaugare.getDate() %>
+                                        <%= locals.luna[prod.data_adaugare.getMonth()] %>
+                                        <%= prod.data_adaugare.getFullYear() %>
+                                        (<%= locals.zi[prod.data_adaugare.getDay()] %>)
+                                    </time>    
+                                </th>
+                            </tr>
+                            <tr>
+                                <th> Livrare gratuita </th>
+                                <th> <span class = "val-livrare-gratuita"><%-prod.livrare_gratuita%></span> </th>
+                            </tr>
+                        </table>
+                        
+                        <figure>
+                            <a href = "/produs/<%- prod.id %>"> <img src = "/resurse/images/produse/resized/<%- prod.imagine %>"></a>
+                        </figure>
+                        <p style = "text-align: center; font-size: 20px;"> Categorie: <%- prod.categorie %> </p>
+                        <p style = "text-align: center; font-size: 20px; font-weight: bold;"> Pret: <span class = "val-pret"><%-prod.pret%></span> </p>
+                        <!--
+                        <div class = "info-produs">
+                            <p class = "pret"> Pret: <%- prod.pret %> </p>
+                            <p class = "descriere"> Descriere: <%- prod.descriere %> </p>
+                        </div>
+                        <p class = "categorie"> <%- prod.categorie %> </p>
+                        
+                        <label class = "selecteaza-cos">
+                            Selecteaza: <br>
+                            <input type = "checkbox" class = "select-cos" value = "<%-prod.id%>" autocomplete = "off">
+                        </label>
+                        -->
+                    </div>
+                <% } %>
+            </div>
+
         </main>
     
         <footer>

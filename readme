@@ -4,5 +4,6 @@ npm install ejs
 npm install sharp
 npm install sass
 npm install fs
+npm install pg
 
 node index.js

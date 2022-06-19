@@ -1,0 +1,58 @@
+<html lang = "ro">
+    <head>
+        <%- include ("../fragmente/head.ejs"); %>
+    </head>
+
+    <body>
+        <header>
+            <%- include ("../fragmente/header.ejs"); %>
+        </header>
+    
+        <main>
+            <br>
+            
+            <h1> <%- prod.nume %> </h1>
+            <hr>
+            <div id = "prezentare-produs">
+                <section id = "imagine-produs">
+                    <figure>
+                        <a href = "/produs/<%- prod.id %>"> <img src = "/resurse/images/produse/resized/<%- prod.imagine %>"></a>
+                    </figure>
+                </section>
+                <section id = "descriere-produs">
+                    <h2> Info: </h2>
+                    <p> <%- prod.descriere %> </p>
+                    <p> An fabricare: <%- prod.an_fabricare %> </p>
+                    <p> Categorie: <%- prod.categorie %> </p>
+                    <% if(prod.culori.length == 1) { %>
+                        <p> Culoare produs: <%- prod.culori %> </p>
+                    <% } else if(prod.culori.length > 1) { %>
+                        <p> Culori produs: <%- prod.culori %> </p>
+                    <% } %>
+                    <p> Data adaugarii:
+                        <time>
+                            <%= prod.data_adaugare.getDate() %>
+                            <%= locals.luna[prod.data_adaugare.getMonth()] %>
+                            <%= prod.data_adaugare.getFullYear() %>
+                            (<%= locals.zi[prod.data_adaugare.getDay()] %>)
+                        </time>
+                    </p>
+                    <% if(prod.livrare_gratuita) { %>
+                        <u style = "font-weight: bold"> Livrare gratuita! </u>
+                    <% } else { %>
+                        <p> Din pacate, livrarea nu este gratuita pentru acest produs </p>
+                    <% } %>
+                </section>
+            </div>
+            <h2 style = "text-align: center"> Get it now for <%= (prod.pret / 4.7).toFixed(1) %>$! </h2>
+            <button style = "display: block; width: 20%; margin-left: auto; margin-right: auto"> Buy </button>
+                
+        </main>
+    
+        <footer>
+            <%- include ("../fragmente/footer.ejs"); %>
+        </footer>
+
+    </body>
+
+</html>

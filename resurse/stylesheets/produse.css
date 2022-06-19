@@ -1,0 +1,60 @@
+
+.grid-produse {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5%;
+    row-gap: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.produs {
+    width: auto;
+    height: fit-content;
+    min-height: 350px;
+    background-color: white;
+}
+
+@media only screen and (min-width: 1000px) {
+    .produs h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 999px) {
+    .produs h3 {
+        font-size: 1.2rem;
+    }
+}
+
+.produs h3 {
+    text-align: center;
+    min-height: 50px;
+    margin: 0;
+    line-height: 80px;
+}
+
+.produs h3 a {
+    text-decoration: none;
+    color: black;
+    line-height: 1.5;
+    display: inline-block;
+}
+
+.produs table {
+    height: 200px;
+    width: 100%;
+}
+
+.produs img {
+    width: 100%;
+    margin: 0;
+}
+
+.produs figure {
+    margin: 0;
+}
+
+main label {
+    display: block;
+}

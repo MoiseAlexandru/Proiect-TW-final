@@ -9,6 +9,9 @@
 }
 
 @media only screen and (min-width: 1000px) {
+
+@if <%-locals.nrImagini%> > 0 {
+
     $nrImagini: <%- locals.nrImagini %>;
 
     $frameTime: math.div(1, $nrImagini) * 100%;
@@ -94,4 +97,5 @@
             transform: translate(0px, 0px);
         }
     }
+}
 }

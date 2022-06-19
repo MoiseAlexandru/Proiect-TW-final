@@ -1,0 +1,30 @@
+#prezentare-produs {
+    display: grid;
+    grid-template-areas: 
+        "imagine-produs descriere-produs";
+    grid-template-columns: 40% 60%;
+}
+
+
+#imagine-produs {
+    grid-area: imagine-produs;
+    width: 100%;
+    border: 0;
+}
+
+#imagine-produs img {
+    width: 100%;
+}
+
+#imagine-produs h3 {
+    text-align: center;
+    font-size: x-large;
+}
+
+#descriere-produs {
+    grid-area: descriere-produs;
+    width: 100%;
+    text-align: center;
+    font-size: 18;
+    border: 0;
+}

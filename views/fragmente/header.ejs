@@ -23,13 +23,18 @@
             </ul>
         </li>
         <li>
-            <a href = "produse"> Produse </a>
+            <a href = "/produse"> Produse </a>
             <ul>
-                <li> <a href = "/produse#papusi"> Papusi </a> </li>
-                <li> <a href = "/produse#masini"> Masini si roboti </a> </li>
-                <li> <a href = "/produse#plus"> Animale de plus </a> </li>
-                <li> <a href = "/produse#jocuri-societate"> Jocuri societate </a> </li>
-                <li> <a href = "/produse#altele"> Altele </a> </li>
+                <% for(let optiuneMeniu of locals.optiuniMeniu) { %>
+                <li> <a href = "/produse/<%-optiuneMeniu.link%>"> <%-optiuneMeniu.nume%> </a> </li>
+                <% } %>
+            </ul>
+        </li>
+        <li>
+            <a href = "galerii"> Galerii </a>
+            <ul>
+                <li> <a href = "/galerie-statica"> Galerie statica </a> </li>
+                <li> <a href = "/galerie-animata"> Galerie animata </a> </li>
             </ul>
         </li>
         <li class = "link-right"> <a href = "/cart"> Cos </a> </li>

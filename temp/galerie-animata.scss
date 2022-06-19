@@ -9,7 +9,10 @@
 }
 
 @media only screen and (min-width: 1000px) {
-    $nrImagini: 6;
+
+@if 8 > 0 {
+
+    $nrImagini: 8;
 
     $frameTime: math.div(1, $nrImagini) * 100%;
 
@@ -94,4 +97,5 @@
             transform: translate(0px, 0px);
         }
     }
+}
 }
